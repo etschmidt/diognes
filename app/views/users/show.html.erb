@@ -1,0 +1,5 @@
+<p>ID: <%= @user.id %><br>
+Name: <%= @user.name %><br>
+Description: <%= @user.description %></p>
+
+<small>This is your only hyperlink; cherish it:<%= link_to "Sign out", destroy_user_session_path, :method => :delete %></small>
