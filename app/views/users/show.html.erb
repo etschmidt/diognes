@@ -1,10 +1,20 @@
-<p>
-<strong>ID:</strong> <%= @user.id %><br>
-<strong>Name:</strong> <%= @user.name %><br>
-<strong>Description:</strong> <%= @user.description %>
-<% if user_signed_in? %>
-	<% link_to "edit", edit_user_registration_path %>
-<% end %>
-</p>
+<div>
+	<strong>USER INFO:</strong><br>
+	Number: <%= @user.id %><br>
+	Name: <%= @user.name %><br>
+	About: <%= @user.description %><br>
+	<% if current_user == @user %>
+		<%= link_to "edit", edit_user_path(@user) %>
+	<% end %>
+</div><br>
 
-<small><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></small>
+<% if current_user == @user %>
+	<%= render 'posts/post_form' %><br>
+<% end %>
+
+<div>
+	<strong>POSTS:</strong>
+	<ol>
+		<%= render @posts %>
+	</ol>
+</div>

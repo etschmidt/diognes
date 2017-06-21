@@ -1,9 +1,13 @@
 <div>
+	<%= link_to "home", root_path %><br>
+	<%= link_to "about", about_path %><br>
 	<% if user_signed_in? %>
-		<%= link_to "home", root_path %><br>
+
+		<%= link_to "sign out", destroy_user_session_path, :method => :delete %><br>
 	<% else %>
 		<%= link_to "sign in", new_user_session_path %><br>
 	<% end %>
-	<%= link_to "about", about_path %><br>
-	users: http://www.anti.social/u/USER_ID_NUMBER <small>if you know the number number and the profile isn't private</small><br>
+	
+	users: http://www.anti.social/u/"user_number"<br>
+	<small>(if you know the number and the profile isn't private)</small><br>
 </div>
