@@ -1,8 +1,8 @@
 <div>
-	Home: http://www.anti.social<br>
-	Users: http://www.anti.social/u/USER_ID_NUMBER<br>
+	<%= link_to "home", root_path %><br>
 	<% if !user_signed_in? %>
-		Sign In: http://www.anti.social/u/sign_in<br>
+		<%= link_to "sign in", new_user_session_path %><br>
 	<% end %>
-	About: http://www.anti.social/about<br>
+	<%= link_to "about", about_path %><br>
+	users: http://www.anti.social/u/USER_ID_NUMBER <small>if you know the number number and the profile isn't private</small><br>
 </div>
