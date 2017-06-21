@@ -5,9 +5,55 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-25.times do |n|
+User.create!(name:  "Ethan",
+               email: "info@gymbull.com",
+               password:              "Password1",
+               password_confirmation: "Password1",
+               description: "description", 
+               private: false)
+
+5.times do |n|
   name  = Faker::Ancient.hero
-  email = "example-#{n+1}@gymbull.com"
+  email = "example-#{n+1}@anti.social"
+  password = "Password1"
+  description = Faker::Lorem.paragraph(2)
+  User.create!(name:  name,
+               email: email,
+               password:              password,
+               password_confirmation: password,
+               description: description, 
+               private: true)
+end
+
+5.times do |n|
+  name  = Faker::Ancient.hero
+  email = "example-#{n+1}@anti.social"
+  password = "Password1"
+  description = Faker::Lorem.paragraph(2)
+  User.create!(name:  name,
+               email: email,
+               password:              password,
+               password_confirmation: password,
+               description: description, 
+               private: false)
+end
+
+5.times do |n|
+  name  = Faker::Ancient.hero
+  email = "example-#{n+1}@anti.social"
+  password = "Password1"
+  description = Faker::Lorem.paragraph(2)
+  User.create!(name:  name,
+               email: email,
+               password:              password,
+               password_confirmation: password,
+               description: description, 
+               private: true)
+end
+
+10.times do |n|
+  name  = Faker::Ancient.hero
+  email = "example-#{n+1}@anti.social"
   password = "Password1"
   description = Faker::Lorem.paragraph(2)
   User.create!(name:  name,
