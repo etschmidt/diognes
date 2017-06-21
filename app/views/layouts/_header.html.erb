@@ -1,6 +1,7 @@
 <div>
-	<%= link_to "home", root_path %><br>
-	<% if !user_signed_in? %>
+	<% if user_signed_in? %>
+		<%= link_to "home", root_path %><br>
+	<% else %>
 		<%= link_to "sign in", new_user_session_path %><br>
 	<% end %>
 	<%= link_to "about", about_path %><br>

@@ -2,6 +2,9 @@
 <strong>ID:</strong> <%= @user.id %><br>
 <strong>Name:</strong> <%= @user.name %><br>
 <strong>Description:</strong> <%= @user.description %>
+<% if user_signed_in? %>
+	<% link_to "edit", edit_user_registration_path %>
+<% end %>
 </p>
 
 <small><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></small>

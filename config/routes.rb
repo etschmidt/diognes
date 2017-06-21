@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  root "static_pages#about" #this needs to be changed
+  root 'users#current_user_home' #this needs to be changed
 
-  get '/about', to: "static_pages#about"
+  get '/about', to: 'static_pages#about'
 
   devise_for :users, path: 'u'
 
