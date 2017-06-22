@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 	around_action :catch_not_found
 
 	before_action :signed_in_user, 	only: [:current_user_home]
-	before_action :private?, 				only: [:show, :edit, :update]
+	before_action :private?, 				only: [:show]
 	before_action :correct_user?, 	only: [:edit, :update]
 
 	def show
@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 		@post = current_user.posts.build if current_user == @user
 	end
 
+=begin
 	def edit
 		@user = User.find(params[:id])
 		@posts = @user.posts
@@ -25,16 +26,13 @@ class UsersController < ApplicationController
 			render 'edit'
 		end
 	end
+=end
 
 	def current_user_home
 	  redirect_to current_user
 	end
 
 	private  
-
-	def user_params
-		params.require(:user).permit(:name, :email, :description, :private)
-	end
 
 	def correct_user?
 		@user = User.find(params[:id])
