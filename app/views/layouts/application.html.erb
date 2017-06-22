@@ -20,10 +20,8 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <small>
-      <%= notice %>
-      <%= alert %>
-    </small>
+      <%= strip_tags(notice) %>
+      <%= strip_tags(alert) %>
     <%= yield %>
   </body>
 </html>
