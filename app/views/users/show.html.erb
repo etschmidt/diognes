@@ -1,7 +1,8 @@
 <br><strong>USER INFO:</strong><br>
 Number: <%= @user.id %><br>
 Name: <%= @user.name %><br>
-About: <%= @user.description %><br>
+About: <%= sanitize simple_format(@user.description), tags: %w(strong em a code pre h2 h3 p blockquote ul ol li br),
+                    attributes: %w(href) %><br>
 <% if current_user == @user %>
 	<%= link_to "edit", edit_user_registration_path %>
 <% end %><br>
@@ -12,6 +13,6 @@ About: <%= @user.description %><br>
 <% end %>
 
 <strong>POSTS:</strong>
-<ol>
+<ol reversed>
 	<%= render @posts %>
 </ol>
