@@ -14,7 +14,7 @@ User.create!(name:  "Ethan",
 
 5.times do |n|
   name  = Faker::Ancient.hero
-  email = "example-#{n+1}@anti.social"
+  email = "example-#{n+1}@gymbull.com"
   password = "Password1"
   description = Faker::Lorem.paragraph(2)
   User.create!(name:  name,
@@ -27,7 +27,7 @@ end
 
 5.times do |n|
   name  = Faker::Ancient.hero
-  email = "example-#{(n+6)+1}@anti.social"
+  email = "example-#{(n+6)+1}@gymbull.com"
   password = "Password1"
   description = Faker::Lorem.paragraph(2)
   User.create!(name:  name,
@@ -40,7 +40,7 @@ end
 
 5.times do |n|
   name  = Faker::Ancient.hero
-  email = "example-#{(n+11)+1}@anti.social"
+  email = "example-#{(n+11)+1}@gymbull.com"
   password = "Password1"
   description = Faker::Lorem.paragraph(2)
   User.create!(name:  name,
@@ -53,7 +53,7 @@ end
 
 10.times do |n|
   name  = Faker::Ancient.hero
-  email = "example-#{(n+16)+1}@anti.social"
+  email = "example-#{(n+16)+1}@gymbull.com"
   password = "Password1"
   description = Faker::Lorem.paragraph(2)
   User.create!(name:  name,
