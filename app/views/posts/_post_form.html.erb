@@ -1,4 +1,6 @@
 <%= form_for(@post) do |f| %>
   <%= f.text_area :content, size: "35x5" %><br>
+  <small>the following html tags are allowed:<br>
+  strong em a code pre h2 h3 p blockquote ul ol li br</small><br>
   <%= f.submit "post"%>
 <% end %>
