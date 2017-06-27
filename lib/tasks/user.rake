@@ -2,9 +2,9 @@ namespace :user do
 
 	task :create => :environment do
 
-		50.times do |n|
+		20.times do |n|
 		  name  = Faker::Ancient.hero
-		  email = "example-#{n+50}@gymbull.com"
+		  email = "example-#{n+150}@diogn.es"
 		  password = "Password1"
 		  description = Faker::Hipster.paragraph
 		  User.create!(name:  name,
