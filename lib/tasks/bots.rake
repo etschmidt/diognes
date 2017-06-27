@@ -75,3 +75,16 @@ namespace :quote do
 		post.save
 	end
 end
+
+namespace :number do
+
+	task :post => :environment do
+
+		number = Number.new
+
+		post = Post.new( user_id: 184,
+										content: number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" +
+										number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>")
+		post.save
+	end
+end
