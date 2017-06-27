@@ -1,5 +1,6 @@
 <li>
-	<%= sanitize simple_format(post.content), tags: %w(strong em a code pre h2 h3 p blockquote ul ol li br),
-                    attributes: %w(href) %>
+	<p>
+	<%= sanitize post.content, tags: %w(strong em a code pre h2 h3 p blockquote ul ol li br), attributes: %w(href) %>                   	
+  </p>
 	----------------------------------------
 </li>
