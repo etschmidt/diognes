@@ -141,26 +141,26 @@ DEATHS = ["Calorie Row", "Wallballs", "Deadlifts", "Front Squats", "Kettlebell S
     if @wod_type == "EMOM"
       return ["#{@set1}", "#{@set2}", "#{@set3}", "#{@set4}",
               "#{@set5}", "#{@set6}", "#{@set7}", "#{@set8}"]
-              .sample(2).map { |i| "" + i.to_s + "" }.join("\n")
+              .sample(2).map { |i| "" + i.to_s + "" }.join("<br>")
     elsif @wod_type == "RFT" 
       if @rounds < 5
         return ["#{@set1}", "#{@set2}", "#{@set3}", "#{@set4}",
                 "#{@set5}", "#{@set6}", "#{@set7}", "#{@set8}"]
-               .sample(rand(3..7)).map { |i| "" + i.to_s + "" }.join("\n")
+               .sample(rand(3..7)).map { |i| "" + i.to_s + "" }.join("<br>")
       else
         return ["#{@set1}", "#{@set2}", "#{@set3}", "#{@set4}",
                 "#{@set5}", "#{@set6}", "#{@set7}", "#{@set8}"]
-               .sample(rand(2..4)).map { |i| "" + i.to_s + "" }.join("\n")
+               .sample(rand(2..4)).map { |i| "" + i.to_s + "" }.join("<br>")
       end
     else     # wod_type is AMRAP
       if @time < 12
         return ["#{@set1}", "#{@set2}", "#{@set3}", "#{@set4}",
                 "#{@set5}", "#{@set6}", "#{@set7}", "#{@set8}"]
-               .sample(rand(3..7)).map { |i| "" + i.to_s + "" }.join("\n")
+               .sample(rand(3..7)).map { |i| "" + i.to_s + "" }.join("<br>")
       else
         return ["#{@set1}", "#{@set2}", "#{@set3}", "#{@set4}",
                 "#{@set5}", "#{@set6}", "#{@set7}", "#{@set8}"]
-               .sample(rand(2..4)).map { |i| "" + i.to_s + "" }.join("\n")
+               .sample(rand(2..4)).map { |i| "" + i.to_s + "" }.join("<br>")
       end
     end
   end
@@ -169,37 +169,37 @@ DEATHS = ["Calorie Row", "Wallballs", "Deadlifts", "Front Squats", "Kettlebell S
 # clearly, there must be a better way to do this than check the regex against the string
   def bbweight
     if @sets.to_s =~ /OHP|C&Press|SDLHP|Snatches|HangSnatch|PowerSnatch|HPS|Thrusters|Clusters|OHS/ 
-      return ["75/55", "95/65", "115/85", "135/95"].sample + "#\n"
+      return ["75/55", "95/65", "115/85", "135/95"].sample + "#<br>"
     elsif @sets.to_s =~ /PushJerk|PushPress|HPC|C&J/
-      return ["115/85", "135/95", "155/105", "185/115"].sample + "#\n"
+      return ["115/85", "135/95", "155/105", "185/115"].sample + "#<br>"
     elsif @sets.to_s =~ /FrontSquat|Cleans|HangClean|PowerClean/
-      return ["115/85", "135/95", "155/105", "185/115", "205/135", "225/155"].sample + "#\n"
+      return ["115/85", "135/95", "155/105", "185/115", "205/135", "225/155"].sample + "#<br>"
     elsif @sets.to_s =~ /BackSquat|Deadlift/
-      return ["115/85", "135/95", "155/105", "185/115", "205/135", "225/155", "275/185"].sample + "#\n"      
+      return ["115/85", "135/95", "155/105", "185/115", "205/135", "225/155", "275/185"].sample + "#<br>"      
     end
   end
 
   def kbweight
     if @sets.to_s =~ /KB/
-      return ["1", "1.5", "2"].sample + "pd kb\n"
+      return ["1", "1.5", "2"].sample + "pd kb<br>"
     end
   end
 
   def slamweight
     if @sets.to_s =~ /Slamballs/
-      return ["20/15", "30/20", "40/30"].sample + "# sb\n"
+      return ["20/15", "30/20", "40/30"].sample + "# sb<br>"
     end
   end
 
   def wallweight
     if @sets.to_s =~ /Wallballs/
-      return ["20/14", "30/20"].sample + "# wb\n"
+      return ["20/14", "30/20"].sample + "# wb<br>"
     end
   end
 
   def height
     if @sets.to_s =~ /BJ|BoxJumps/
-       return ["24/20", "30/24"].sample + "\"\n"
+       return ["24/20", "30/24"].sample + "\"<br>"
     end
   end
 
@@ -226,24 +226,24 @@ DEATHS = ["Calorie Row", "Wallballs", "Deadlifts", "Front Squats", "Kettlebell S
   end
   
   def print_ss
-    "Strength / Skill:\n" +
-    "#{@ss}\n\n"
+    "Strength / Skill:<br>" +
+    "#{@ss}<br><br>"
   end
 
   def print_wod
     if @wod_type == "EMOM"
-      "WOD:\n" +
-      "#{@wod_type} #{@time}\n\n" +
-      "#{@sets}\n\n" +
+      "WOD:<br>" +
+      "#{@wod_type} #{@time}<br><br>" +
+      "#{@sets}<br><br>" +
       "#{bbweight}" +
       "#{kbweight}" +
       "#{height}" +
       "#{slamweight}" +
       "#{wallweight}"
     else
-      "WOD:\n" +
-      "#{@rounds}#{@wod_type}#{@time}\n\n" +
-      "#{@sets}\n\n" +
+      "WOD:<br>" +
+      "#{@rounds}#{@wod_type}#{@time}<br><br>" +
+      "#{@sets}<br><br>" +
       "#{bbweight}" +
       "#{kbweight}" +
       "#{height}" +
