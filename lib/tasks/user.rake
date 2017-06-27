@@ -4,7 +4,7 @@ namespace :user do
 
 		20.times do |n|
 		  name  = Faker::Ancient.hero
-		  email = "example-#{n+141}@diogn.es"
+		  email = "example-#{n+142}@diogn.es"
 		  password = "Password1"
 		  description = Faker::Hipster.paragraph
 		  User.create!(name:  name,
