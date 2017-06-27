@@ -226,13 +226,13 @@ DEATHS = ["Calorie Row", "Wallballs", "Deadlifts", "Front Squats", "Kettlebell S
   end
   
   def print_ss
-    "Strength / Skill:<br>" +
+    "<strong> Strength / Skill: </strong><br>" +
     "#{@ss}<br><br>"
   end
 
   def print_wod
     if @wod_type == "EMOM"
-      "WOD:<br>" +
+      "<strong> WOD: </strong><br>" +
       "#{@wod_type} #{@time}<br><br>" +
       "#{@sets}<br><br>" +
       "#{bbweight}" +
@@ -241,7 +241,7 @@ DEATHS = ["Calorie Row", "Wallballs", "Deadlifts", "Front Squats", "Kettlebell S
       "#{slamweight}" +
       "#{wallweight}"
     else
-      "WOD:<br>" +
+      "<strong>WOD: </strong><br>" +
       "#{@rounds}#{@wod_type}#{@time}<br><br>" +
       "#{@sets}<br><br>" +
       "#{bbweight}" +

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170627205604) do
+ActiveRecord::Schema.define(version: 20170627211659) do
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20170627205604) do
   end
 
   create_table "powers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ppls", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "quotes", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

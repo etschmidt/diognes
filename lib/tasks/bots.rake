@@ -32,9 +32,46 @@ namespace :power do
 		power.reps
 
 		post = Post.new(user_id: 163, # 5 in dev 
-							 content: power.days + " - " + power.title + power.print_power)	
+							 content: "<strong>" + power.days + " - " + power.title + "</strong>" + power.print_power)	
 		post.save
 
 	end
 
+end
+
+namespace :ppl do
+
+	task :test => :environment do
+		ppl = Ppl.new
+		ppl.isolates
+		ppl.compounds
+		ppl.muscles
+		
+		print ppl.print_ppl
+	end
+	
+	task :post => :environment do
+		ppl = Ppl.new
+		ppl.isolates
+		ppl.compounds
+		ppl.muscles
+		
+		post = Post.new(	 
+							 user_id: 156, #PhillyTraining
+							 content: "<strong>" + ppl.title + "</strong><br><br>" + ppl.print_ppl)	
+		post.save
+	end
+	
+end
+
+namespace :quote do
+
+	task :post => :environment do
+
+		quote = Quote.new
+
+		post = Post.new( user_id: 25,
+										content: quote.print_quote)
+		post.save
+	end
 end
