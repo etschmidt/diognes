@@ -90,6 +90,8 @@ namespace :number do
 
 	task :multi => :environment do
 
+		number = Number.new
+
 		50.times do |n|
 			Post.create!( user_id: 184,
 										content: number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" +
