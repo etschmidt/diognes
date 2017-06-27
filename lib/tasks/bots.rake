@@ -87,4 +87,13 @@ namespace :number do
 										number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>")
 		post.save
 	end
+
+	task :multi => :environment do
+
+		50.times do |n|
+			Post.create!( user_id: 184,
+										content: number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" +
+										number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>")
+		end
+	end
 end
