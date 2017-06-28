@@ -1,7 +1,7 @@
 <br><strong>USER INFO:</strong><br>
 Number: <%= @user.id %><br>
 Name: <%= @user.name %><br>
-About: <%= sanitize (@user.description), tags: %w(strong em a code pre h2 h3 p blockquote ul ol li br),
+About: <%= sanitize simple_format(@user.description), tags: %w(strong em a code pre h2 h3 p blockquote ul ol li br),
                     attributes: %w(href) %><br>
 <br>Views: <%= @user.impressionist_count %><br>
 <% if current_user == @user %>
