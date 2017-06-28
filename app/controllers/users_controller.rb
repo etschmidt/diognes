@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+	impressionist actions: [:show] # for tracking views &c.
+
 	around_action :catch_not_found
 
 	before_action :signed_in_user, 	only: [:current_user_home]
@@ -9,6 +11,8 @@ class UsersController < ApplicationController
 		@user  = User.find(params[:id])
 		@posts = @user.posts
 		@post = current_user.posts.build if current_user == @user
+
+		impressionist(@user)
 	end
 
 =begin
