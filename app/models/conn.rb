@@ -24,7 +24,7 @@ class Conn < ApplicationRecord
 
 	def print_order
 		if @station == "helm"
-			if @extra > 9
+			if @extra > 8
 				"#{@other}"
 			else
 				if @hand > 2
