@@ -15,10 +15,10 @@ namespace :wod do
 	end
 
 	task :multi => :environment do 
-		wod = Wod.new
 
-		50.times do |n|
-			Post.create!( user_id: 141,
+		20.times do |n|
+			wod = Wod.new
+			Post.create!( user_id: 5,
 										content: wod.print_wod)
 		end
 	end
@@ -99,9 +99,8 @@ namespace :number do
 
 	task :multi => :environment do
 
-		number = Number.new
-
 		50.times do |n|
+		number = Number.new
 			Post.create!( user_id: 184,
 										content: number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" +
 										number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>")
@@ -126,9 +125,9 @@ namespace :conn do
 	end
 
 	task :multi => :environment do 
-		conn = Conn.new
 
-		15.times do |n|
+		20.times do |n|
+		conn = Conn.new
 			Post.create!( user_id: 5,
 										content: conn.print_order)
 		end
