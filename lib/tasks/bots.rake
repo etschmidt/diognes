@@ -113,7 +113,7 @@ namespace :conn do
 	task :test => :environment do
 		conn = Conn.new
 		
-		print conn.print_order
+		print conn.print_order + "\n"
 	end
 	
 	task :post => :environment do
@@ -126,7 +126,7 @@ namespace :conn do
 
 	task :multi => :environment do 
 
-		20.times do |n|
+		50.times do |n|
 		conn = Conn.new
 			Post.create!( user_id: 5,
 										content: conn.print_order)
