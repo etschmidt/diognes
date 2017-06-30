@@ -18,7 +18,7 @@ namespace :wod do
 
 		20.times do |n|
 			wod = Wod.new
-			Post.create!( user_id: 5,
+			Post.create!( user_id: 141,
 										content: wod.print_wod)
 		end
 	end
