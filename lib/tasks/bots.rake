@@ -9,10 +9,18 @@ namespace :wod do
 	task :post => :environment do
 		wod = Wod.new
 		
-		post = Post.new(user_id: 5, # 5 in dev 
+		post = Post.new(user_id: 141, # 5 in dev 
 							 			content: wod.print_ss + wod.print_wod)	
 		post.save
 	end
+
+	task :multi => :environment do 
+		wod = Wod.new
+
+		50.times do |n|
+			Post.create!( user_id: 141,
+										content: wod.print_wod)
+		end
 end
 
 
@@ -98,4 +106,29 @@ namespace :number do
 										number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>")
 		end
 	end
+end
+
+namespace :conn do
+	
+	task :test => :environment do
+		conn = Conn.new
+		
+		print conn.print_order
+	end
+	
+	task :post => :environment do
+		conn = Conn.new
+		
+		post = Post.new(user_id: 5, # 5 in dev 
+							 			content: wod.print_order)	
+		post.save
+	end
+
+	task :multi => :environment do 
+		conn = Conn.new
+
+		50.times do |n|
+			Post.create!( user_id: 141,
+										content: wod.print_order)
+		end
 end
