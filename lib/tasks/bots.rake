@@ -119,7 +119,7 @@ namespace :conn do
 	task :post => :environment do
 		conn = Conn.new
 		
-		post = Post.new(user_id: 5, # 5 in dev 
+		post = Post.new(user_id: 225, # 5 in dev 
 							 			content: conn.print_order)	
 		post.save
 	end
@@ -128,7 +128,7 @@ namespace :conn do
 
 		50.times do |n|
 		conn = Conn.new
-			Post.create!( user_id: 5,
+			Post.create!( user_id: 225,
 										content: conn.print_order)
 		end
 	end
