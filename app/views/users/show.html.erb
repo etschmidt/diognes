@@ -1,3 +1,7 @@
+<% if @user.private? && current_user.admin? %>
+	[PRIVATE]
+<% end %>
+
 <br><strong>POINTS:</strong> <%= @user.impressions_count %><br>
 
 <br><strong>USER INFO:</strong><br>

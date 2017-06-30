@@ -46,8 +46,8 @@ class UsersController < ApplicationController
 	end
 
 	def private?
-		@user  = User.find(params[:id])
-		if @user.private && current_user != @user
+		@user = User.find(params[:id])
+		if @user.private && current_user != @user && !current_user.admin?
 			redirect_to fail_path
 		end
 	end
