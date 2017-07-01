@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
   root 'users#current_user_home' #this needs to be changed
-
-  get '/about', to: 'static_pages#about'
   
   get '/fail', to: 'static_pages#fail'
   
