@@ -1,0 +1,16 @@
+<p>Total users: <%= User.count %></p>
+<p>Total posts: <%= Post.count %></p>
+-------------------------------------
+<p>Last day:</p>
+<p>Users: <%= User.where(created_at: (Time.now - 24.hours)..Time.now).count %></p>
+<p>Posts: <%= Post.where(created_at: (Time.now - 24.hours)..Time.now).count %></p>
+-------------------------------------
+<p>Last week:</p>
+<p>Users: <%= User.where(created_at: (Time.now - 7.days)..Time.now).count %></p>
+<p>Posts: <%= Post.where(created_at: (Time.now - 7.days)..Time.now).count %></p>
+-------------------------------------
+<p>Top posters:</p> 
+<ol><%= render @top_posters %></ol>
+-------------------------------------
+<p>Recent posts:</p> 
+<ol><%= render @recent_posts %></ol>
