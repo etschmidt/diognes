@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
 
   def admin
   	@top_posters = top_posters.limit(5)
-  	@most_points = User.order('impressions_count desc').limit(5)
+  	@most_points = User.order('impressions_count desc').limit(50)
   	@recent_posts = Post.order('created_at desc').limit(5)
   end
 
