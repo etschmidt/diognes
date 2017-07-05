@@ -2,9 +2,9 @@ class StaticPagesController < ApplicationController
 	before_action :admin_user, only: [:admin]
 
   def admin
-  	@top_posters = top_posters.limit(5)
-  	@most_points = User.order('impressions_count desc').limit(50)
-  	@recent_posts = Post.order('created_at desc').limit(5)
+  	@top_posters = top_posters.limit(10)
+  	@most_points = User.order('impressions_count desc').limit(10)
+  	@recent_posts = Post.order('created_at desc').limit(10)
   end
 
 	private
