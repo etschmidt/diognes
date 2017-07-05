@@ -1,5 +1,9 @@
 <li>
-	Id: <%= user.id %><br>
-	Points: <%= user.impressions_count %><br>
-	Posts: <%= user.posts.count %><br><br>
+	<%= link_to user do %>
+
+		Id: <%= user.id %><br>
+		Points: <%= user.impressions_count %><br>
+		Posts: <%= user.posts.count %><br><br>
+
+	<% end %>
 </li>
