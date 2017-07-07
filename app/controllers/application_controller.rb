@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
    before_action :configure_permitted_parameters, if: :devise_controller?
+  
+  def after_sign_in_path_for(resource_or_scope)
+    user_path(current_user)
+  end
 
 	def signed_in_user
 		unless user_signed_in?

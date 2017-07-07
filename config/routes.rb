@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
 
-  root 'users#current_user_home' #this needs to be changed
+	authenticated do
+	  root to: 'static_pages#agora'
+	end
+
+	devise_scope :user do
+	  root to: "devise/sessions#new"
+	end
   
   get '/fail', to: 'static_pages#fail'
 
   get '/admin', to: 'static_pages#admin'
+
+  get '/agora', to: 'static_pages#agora'
   
   devise_for :users, path: 'u', :controllers => { registrations: 'registrations' }
 

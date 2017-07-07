@@ -7,6 +7,12 @@ class StaticPagesController < ApplicationController
   	@recent_posts = Post.order('created_at desc').limit(10)
   end
 
+  def agora
+  	@top_posters = top_posters.limit(10)
+  	@most_points = User.order('impressions_count desc').limit(10)
+  	@recent_posts = Post.order('created_at desc').limit(10)
+  end
+
 	private
 
  	def admin_user		
