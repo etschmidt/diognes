@@ -8,7 +8,7 @@
 		<%= link_to "sign out", destroy_user_session_path, :method => :delete %><br>
 
 	<% else %>
-		<%= link_to "agora", agora_path %><br>
+		<%= link_to "agora", agora_path %><br><br>
 		<%= link_to "sign in", new_user_session_path %><br>
 	<% end %>
 	
