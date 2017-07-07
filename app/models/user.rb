@@ -11,4 +11,8 @@ class User < ApplicationRecord
 
 	is_impressionable :counter_cache => true, :unique => :request_hash
 
+def self.search(search)
+  search.present? ? where('name LIKE ?', "%#{search}%") : all
+end
+
 end

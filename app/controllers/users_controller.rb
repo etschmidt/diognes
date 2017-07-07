@@ -36,6 +36,15 @@ class UsersController < ApplicationController
 	  redirect_to current_user
 	end
 
+	def index  #this is a terrible hack
+	  @user = User.find_by id: params[:search]
+	  if @user.present?
+		  redirect_to @user
+		else
+			redirect_to fail_path
+		end
+	end
+
 	private  
 
 	def correct_user?

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 	  root to: "devise/sessions#new"
 	end
   
+  post 'search' => 'users#search'
+
   get '/fail', to: 'static_pages#fail'
 
   get '/admin', to: 'static_pages#admin'
@@ -18,7 +20,10 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :users, only: [:show], :path => 'u'
+  resources :users, only: [:index, :show], :path => 'u' do
+    post 'search', :on => :collection
+  end
+  
   resources :posts,          only: [:create]
 
 end

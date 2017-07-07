@@ -1,7 +1,6 @@
 <div>
-	
 	<% if user_signed_in? %>
-		<%= link_to "agora", agora_path %><br>
+		<%= link_to "agora", agora_path %><br><br>
 		<% if current_user.admin? %>
 			<%= link_to "admin", admin_path %><br>
 		<% end %>
@@ -13,6 +12,14 @@
 		<%= link_to "sign in", new_user_session_path %><br>
 	<% end %>
 	
-	users: https://diogn.es/u/"user_number"<br>
+	<%= form_tag users_path, method: :get do %>
+		user #<%= text_field_tag :search, params[:search], size: 2 %>
+		<%= submit_tag "go", :name => nil %>
+	<% end %>
+
 	<small>(if you know the number and the profile isn't private)</small><br>
 </div>
+
+
+
+
