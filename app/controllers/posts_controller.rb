@@ -4,10 +4,10 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     if @post.save
       notice = "posted"
-      redirect_to root_path
+      redirect_to current_user
     else
       notice = "post failed"
-      redirect_to root_path
+      redirect_to current_user
     end
   end
 
