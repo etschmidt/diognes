@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -31,7 +32,6 @@
       a:visited {
         color: #008000;
       }
-
     </style>
 
   <body>
@@ -44,7 +44,16 @@
       <br><%= strip_tags(alert) %><br>
     <% end %>
     <%= yield %>
+   <!-- <button id="nightToggle">Night Mode</button>
 
+    <script src="/assets/jquery.js" type="text/javascript">
+      $(document).ready(function () {
+        $("#nightToggle").click(function(){
+            $("body").toggleClass("night");
+        });
+      });
+    </script>
+-->
 <!-- 
 
 

@@ -1,6 +1,6 @@
 <div>
+	<%= link_to "agora", agora_path %><br><br>
 	<% if user_signed_in? %>
-		<%= link_to "agora", agora_path %><br><br>
 		<% if current_user.admin? %>
 			<%= link_to "admin", admin_path %><br>
 		<% end %>
@@ -8,7 +8,6 @@
 		<%= link_to "sign out", destroy_user_session_path, :method => :delete %><br>
 
 	<% else %>
-		<%= link_to "agora", agora_path %><br><br>
 		<%= link_to "sign in", new_user_session_path %><br>
 	<% end %>
 	
