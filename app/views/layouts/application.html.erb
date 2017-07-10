@@ -16,8 +16,23 @@
       ga('send', 'pageview');
 
     </script>
-  <link rel="manifest" href="/manifest.json" />
-<meta name="apple-mobile-web-app-capable" content="yes"></head>
+    <link rel="manifest" href="/manifest.json" /> <!-- for service worker -->
+    <meta name="apple-mobile-web-app-capable" content="yes"></head>
+    
+    <style>
+      /* NIGHT MODE */
+      body, input, textarea {
+        background-color: #000000;
+        color: #FFFFFF;
+      }
+      a {
+        color: #32CD32;
+      }
+      a:visited {
+        color: #008000;
+      }
+
+    </style>
 
   <body>
     <%= render 'application/favicon' %>
