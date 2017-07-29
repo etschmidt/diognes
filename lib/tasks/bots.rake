@@ -133,3 +133,15 @@ namespace :conn do
 		end
 	end
 end
+
+namespace :purge do
+
+	task :tendays => :environment do
+
+		Post.where('user_id IN (?)', [141, 163, 156, 25, 184, 225]).where('created_at < ?', 10.days.ago).each do |p|
+			p.destroy
+		end
+
+	end
+
+end
