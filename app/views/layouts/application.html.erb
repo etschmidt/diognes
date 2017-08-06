@@ -19,22 +19,8 @@
     </script>
     <link rel="manifest" href="/manifest.json" /> <!-- for service worker -->
     <meta name="apple-mobile-web-app-capable" content="yes"></head>
-    
-    <style>
-      /* NIGHT MODE */
-      body, input, textarea {
-        background-color: #000000;
-        color: #FFFFFF;
-      }
-      a {
-        color: #32CD32;
-      }
-      a:visited {
-        color: #008000;
-      }
-    </style>
 
-  <body>
+  <body class="night">
     <%= render 'application/favicon' %>
     <%= render 'layouts/header' %>
     <% if notice %>
@@ -44,16 +30,9 @@
       <br><%= strip_tags(alert) %><br>
     <% end %>
     <%= yield %>
-   <!-- <button id="nightToggle">Night Mode</button>
+    <br>
+    <small>donate: 1AabvnE4DDDKNX6J8Wo8HEbwAXQTeFm5uZ</small>
 
-    <script src="/assets/jquery.js" type="text/javascript">
-      $(document).ready(function () {
-        $("#nightToggle").click(function(){
-            $("body").toggleClass("night");
-        });
-      });
-    </script>
--->
 <!-- 
 
 
