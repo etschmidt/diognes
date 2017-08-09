@@ -69,6 +69,12 @@
 	:-ms-input-placeholder { /* IE 10+ */
 	  color: black;
 	}
+	/* small screen */	
+	@media screen and (max-width: 350px) {
+		ul {
+			padding-left: 20px !important;
+		}
+	}
 	/* large screen */	
 	@media screen and (min-width: 767px) {
 		h1, h2, h3, h4 {
