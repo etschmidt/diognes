@@ -5,7 +5,7 @@
 // NIGHT
 .night {
 	background-color: #000000;
-	  color: #FFFFFF;
+	 color: #FFFFFF;
 	input, textarea {
 	  background-color: #000000;
 	  color: #FFFFFF;
@@ -57,4 +57,49 @@
 	:-ms-input-placeholder { /* IE 10+ */
 	  color: black;
 	}
+}
+
+// VAPORWAVE
+.vapor {
+	background-color: #b3deff;
+	color: #FF6AD5;
+	font-weight: normal;
+  font-family: Helvetica Neue, arial, sans-serif;
+  letter-spacing: 5px;
+  h1, h2, h3, h4 {
+		font-family: Helvetica Neue, arial, sans-serif;
+		font-stretch: extra-expanded;
+		font-weight: bold;
+		letter-spacing: 10px;
+	}
+	input, textarea {
+	  background-color: #66FFC4;
+	  color: #FF6AD5;
+		font-weight: bolder;
+	  font-family: Helvetica Neue, arial, sans-serif;
+	  letter-spacing: 5px;
+	}
+	a {
+	  color: #8795E8;
+	  font-size: 24px;
+  	font-family: Brush Script MT;
+
+  	padding: 0 5px 0 5px;
+	  text-decoration: none;
+	}
+  a:visited {
+  	color: #AD8CFF;
+  }
+  a:hover, a:active, a.focus {
+  	font-family: Brush Script MT;
+  	text-decoration: none;
+  	font-size: 24px;
+  	color: #94D0FF;
+  	padding: 0 5px 0 5px;
+  	background-color: #C774E8;
+  }
+  ol {
+  	margin-left: 30px;
+  }
+
 }
