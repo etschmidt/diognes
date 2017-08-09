@@ -150,7 +150,7 @@ class Ppl < ApplicationRecord
 		elsif @day == "Saturday"
 			@title = "Saturday - Legs"
 			@compound1 = "Front Squat"
-			@compound2 = "Seated Dumbbell Overhead Press"
+			@compound2 = ""
 		else #Sunday
 			@title = "Sunday"
 			@compound1 = ""

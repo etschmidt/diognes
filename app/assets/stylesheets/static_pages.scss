@@ -25,6 +25,16 @@
 	font-stretch: extra-expanded;
 	margin: 10px 10px 0 10px;
 	color: #AAAAAA;
+	border-color: white;
+			border-style: double;  
+			border-width: 7px;
+			margin: 10px;
+			padding: 10px;
+	h1, h2, h3, h4 {
+		color: #0000AA;
+    padding: 0 5px 0 5px;
+    background-color: #AAAAAA;
+	}
 
   a {
     color: #FFFFFF;
@@ -39,10 +49,9 @@
   	background-color: yellow;
   	text-decoration: none;
   }
-
   input, textarea {
   	font-weight: bolder;
-  	font-stretch: extra-expanded;
+  	font-stretch: expanded;
   	padding-left: 5px;
   	background-color: #AAAAAA;
   	box-shadow: 5px 5px;
@@ -56,6 +65,13 @@
 	}
 	:-ms-input-placeholder { /* IE 10+ */
 	  color: black;
+	}
+}
+
+/* large screen */	
+@media screen and (min-width: 767px) {
+	h1, h2, h3, h4 {
+		width: 45%;
 	}
 }
 

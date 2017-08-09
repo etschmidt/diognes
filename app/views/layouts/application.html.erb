@@ -4,6 +4,7 @@
     <title>diogn.es</title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset=utf-8>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
    
@@ -24,7 +25,7 @@
     <%= render 'application/favicon' %>
     <%= render 'layouts/header' %>
     <% if notice %>
-      <br><%= strip_tags(notice) %><br>
+      <br><%= strip_tags(ntoice) %><br>
     <% end %>
     <% if alert %>
       <br><%= strip_tags(alert) %><br>
