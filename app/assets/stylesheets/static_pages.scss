@@ -21,7 +21,7 @@
 // MSDOS
 .msdos {
   background-color: #0000AA;
-	font-family: 'VT323', monospace;
+	font-family: "Lucida Console", Monaco, monospace;
 	font-stretch: extra-expanded;
 	margin: 10px 10px 0 10px;
 	color: #AAAAAA;
@@ -32,7 +32,7 @@
 			padding: 10px;
 	h1, h2, h3, h4 {
 		color: #0000AA;
-    padding: 0 5px 0 5px;
+    padding: 3px 5px 3px 5px;
     background-color: #AAAAAA;
 	}
 
@@ -42,6 +42,7 @@
     font-stretch: expanded;
     letter-spacing: 2px;
   	text-decoration: none;
+  	padding: 3px 0px 3px 0px;
 
   }
   a:hover, a:active, a.focus {
