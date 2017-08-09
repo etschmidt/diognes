@@ -5,6 +5,8 @@
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset=utf-8>
+      <!-- font -->
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
    
@@ -25,10 +27,10 @@
     <%= render 'application/favicon' %>
     <%= render 'layouts/header' %>
     <% if notice %>
-      <br><%= strip_tags(notice) %><br>
+      <br><span class="info"><%= strip_tags(notice) %></span><br>
     <% end %>
     <% if alert %>
-      <br><%= strip_tags(alert) %><br>
+      <br><span class="info"><%= strip_tags(alert) %></span><br>
     <% end %>
     <%= yield %>
     <br>
