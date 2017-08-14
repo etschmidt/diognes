@@ -14,8 +14,4 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :description, :private, :current_password)
   end
 
-  def update_resource(resource, params)
-    resource.update_without_password(params)
-  end
-
 end

@@ -33,6 +33,14 @@ def password_required?
 	super && provider.blank?
 end
 
+def update_with_password(params, *options)
+	if encrypted_password.blank?
+		update_attributes(params, *options)
+	else 
+		super
+	end
+end
+
 def self.search(search)
   search.present? ? where('name LIKE ?', "%#{search}%") : all
 end
