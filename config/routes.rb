@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   get '/agora', to: 'static_pages#agora'
   
-  devise_for :users, path: 'u', :controllers => { registrations: 'registrations' }
+  devise_for :users, path: 'u', :controllers => { registrations: 'registrations', omniauth_callbacks: 'omniauth_callbacks' }
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

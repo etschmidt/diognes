@@ -21,16 +21,17 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
+  <% if f.object.password_required? %>
     <%= f.label :password %> <br>
     <%= f.password_field :password, autocomplete: "off" %>
     <% if @minimum_password_length %>
       <br />
       <em><%= @minimum_password_length %> characters minimum</em><br>
     <% end %>
-
+  
     <%= f.label :password_confirmation %><br>
     <%= f.password_field :password_confirmation, autocomplete: "off" %><br>
-
+  <% end %>
     <%= f.submit "sign up" %><br>
 
 <% end %>

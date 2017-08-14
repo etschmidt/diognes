@@ -33,8 +33,10 @@ gem "serviceworker-rails"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'devise'    # user auth
+gem 'omniauth-twitter'
 
-gem 'faker',                   '1.7.3'  # data faker
+
+gem 'faker',   '1.7.3'  # data faker
 
 gem 'impressionist'  # view counter
 
