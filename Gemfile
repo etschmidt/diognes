@@ -34,7 +34,7 @@ gem "serviceworker-rails"
 # gem 'capistrano-rails', group: :development
 gem 'devise'    # user auth
 gem 'omniauth-twitter'
-
+gem 'omniauth-facebook'
 
 gem 'faker',   '1.7.3'  # data faker
 
