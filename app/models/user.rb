@@ -16,7 +16,12 @@ def self.from_omniauth(auth)
   where(provider: auth.provider, uid: auth.uid).first_or_initialize do |user|
     user.provider = auth.provider
     user.uid = auth.uid
-    user.name = auth.info.nickname
+    if auth.info.nickname
+	    user.name = auth.info.nickname  #twitter
+    else
+    	user.name = auth.info.name
+    	user.description = auth.info.about
+    end
     user.email = "#{user.uid}@diogn.es" #there'a got to be a better way than this, but CAN'T FIND OUT OHOW TO GET THE EMAIL FROM TWITTER
     user.save!
   end
