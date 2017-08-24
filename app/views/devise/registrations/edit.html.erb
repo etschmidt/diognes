@@ -6,8 +6,10 @@
   <%= f.label :name %><br>
   <%= f.text_field :name %><br>
 
-  <%= f.label :email %><br>
-  <%= f.email_field :email %><br>
+  <% if f.object.encrypted_password.present? %>
+    <%= f.label :email %><br>
+    <%= f.email_field :email %><br>
+  <% end %>
 
   <%= f.label :description %><br>
   <%= f.text_area :description, size: "35x5" %><br>
