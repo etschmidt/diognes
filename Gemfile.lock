@@ -176,6 +176,8 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_autolink (1.1.6)
+      rails (> 3.1)
     rails_db (1.6.0)
       codemirror-rails
       kaminari
@@ -288,6 +290,7 @@ DEPENDENCIES
   pg (~> 0.18.4)
   puma (~> 3.7)
   rails (~> 5.1.1)
+  rails_autolink
   rails_db
   rails_real_favicon
   sass-rails (~> 5.0)
