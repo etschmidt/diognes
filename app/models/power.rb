@@ -74,7 +74,7 @@ class Power < ApplicationRecord
 	end
 
 	def print_power
-		if @date.to_i >= 16 && (@month == "August" or @month == "November" or @month == "February" or @month =="May")
+		if @date.to_i >= 21 && (@month == "August" or @month == "November" or @month == "February" or @month =="May")
 			return "Light cardio and active recovery. Focus on stretching/ rehab for knees, hips and shoulders.<br>" +
 							"Don't forget to reduce caloric intake when not lifting"
 		else
