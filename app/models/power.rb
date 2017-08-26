@@ -63,7 +63,7 @@ class Power < ApplicationRecord
 			@reps1 = "3"
 			@reps2 = "6"
 		elsif @month == "August" or @month == "November" or @month == "February" or @month =="May"
-			if @date.to_i <= 15
+			if @date.to_i <= 20
 				@reps1 = "2"
 				@reps2 = "6"
 			else
