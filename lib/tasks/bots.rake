@@ -10,7 +10,7 @@ namespace :wod do
 		wod = Wod.new
 		
 		post = Post.new(user_id: 141, # 5 in dev 
-							 			content: wod.print_ss + wod.print_wod)	
+							 			content: Time.now.strftime("%e %b") + "\n\n" + wod.print_ss + wod.print_wod)	
 		post.save
 	end
 
@@ -41,7 +41,7 @@ namespace :power do
 		power.reps
 
 		post = Post.new(user_id: 163, # 5 in dev 
-							 content: "<strong>" + power.days + " - " + power.title + "</strong>" + power.print_power)	
+							 content: "<strong>" + power.days + " - " + power.title + "</strong>" + power.print_power + "\n\n" + Time.now.strftime("%e %b"))	
 		post.save
 
 	end
@@ -67,7 +67,7 @@ namespace :ppl do
 		
 		post = Post.new(	 
 							 user_id: 156, #PhillyTraining
-							 content: "<strong>" + ppl.title + "</strong><br><br>" + ppl.print_ppl)	
+							 content: "<strong>" + ppl.title + "</strong><br><br>" + ppl.print_ppl + "\n\n" + Time.now.strftime("%e %b"))	
 		post.save
 	end
 	
