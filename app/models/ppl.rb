@@ -142,7 +142,7 @@ class Ppl < ApplicationRecord
 		elsif @day == "Thursday"
 			@title = "Thursday - Push"
 			@compound1 = "Standing Military Press"
-			@compound2 = "Incline Dumbbel Bench Press"
+			@compound2 = "Incline Dumbbell Bench Press"
 		elsif @day == "Friday"
 			@title = "Friday - Pull"
 			@compound1 = "Snatch Grip Deadlift"
