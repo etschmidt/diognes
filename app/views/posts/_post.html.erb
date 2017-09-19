@@ -12,7 +12,7 @@
 	    <% end %>
 	  <% end %>
 	  <% if current_user.admin? %>
-	  	<%= post.created_at.to_date.to_formatted_s(:rfc822) %>
+	  	<%= post.created_at.to_date.to_formatted_s(:rfc822), post.user %>
 	  <% end %>
 	<% end %>
 </li>
