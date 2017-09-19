@@ -12,8 +12,10 @@
 	    <% end %>
 	  <% end %>
 	  <% if current_user.admin? %>
-	  	<%= post.created_at.to_date.to_formatted_s(:rfc822) %>
-	  	User: <%= post.user_id %>
+	  	<small>
+		  	<%= post.created_at.to_date.to_formatted_s(:rfc822) %>
+		  	User: <%= post.user_id %>
+	  	</small>
 	  <% end %>
 	<% end %>
 </li>
