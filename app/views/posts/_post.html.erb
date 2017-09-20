@@ -14,7 +14,7 @@
 	  <% if current_user.admin? %>
 	  	<small>
 		  	<%= post.created_at.to_date.to_formatted_s(:rfc822) %>
-		  	User: <%= post.user_id %>
+		  	\\ <%= post.user_id %>
 	  	</small>
 	  <% end %>
 	<% end %>
