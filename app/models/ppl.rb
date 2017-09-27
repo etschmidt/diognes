@@ -9,13 +9,13 @@ class Ppl < ApplicationRecord
 	end
 	
 	CHEST = ["Dumbbell Floor Press", "Cable Crossovers (mid chest)", "Cable Crossovers (bent over)", "Wide Reverse Grip Bench Press", "Decline Bench Press",
-	"Decline Dumbbell Bench Press", "Incline Bench Press", "Dumbbell Flys", "Pec Dec", "Machine Flys", "Reverse Cable Crossovers",
-	"Incline Dumbbell Flys", "Dumbbell Pullover", "Lying Cable Pullover", "Barbell Pullover", 
+	"Decline Dumbbell Bench Press", "Dumbbell Flys", "Pec Dec", "Machine Flys", "Reverse Cable Crossovers",
+	"Incline Dumbbell Flys", "Dumbbell Pullover", "Lying Cable Pullover", "Barbell Pullover", "Dumbbell Bench Press", "Incline Dumbbell Bench Press",
 	"Alternate Dumbbell Bench Press (high start)", "Decline Dumbbell Flys", "Reverse Dumbbell Bench Press", "Reverse Grip Bench Press", "Muscle Clean & Press"].shuffle
 	
 	SHOULDERS = ["Seated Arnold Press", "Weight Plate Front Raise", "Rear Delt Barbell Row To Neck", "Seated Dumbbell Lateral Raise", "Standing Arnold Press",
 	"Alternate Bent Over Dumbbell Reverse Fly", "Dumbbell Lateral Raise", "Dumbbell Front Raise", "Seated Bent Over Dumbbell Reverse Fly", "Cable Lateral Raise", 
-	"Lying Rear Delt Barbell Raise", "Dublin Press", "Cuban Press", "Cable Front Raise", "Dumbbell Reverse Fly On Incline Bench", 
+	"Lying Rear Delt Barbell Raise", "Dublin Press", "Cuban Press", "Cable Front Raise", "Dumbbell Reverse Fly On Incline Bench", "Seated Dumbbell Press", "Standing Dumbbell Press",
 	"Machine Reverse Flys", "Military Press Behind Neck", "Alternate Seated Dumbbell Press", "One Arm Standing Dumbbell Front Raise"].shuffle
 	
 	TRICEPS = ["Dumbbell Tricep Kickback", "One Arm Standing Dumbbell Extension", "Close Grip Push Up", "Weighted Tricep Dips", "Alternate Lying Dumbbell Extension",
@@ -129,8 +129,8 @@ class Ppl < ApplicationRecord
 	def compounds
 		if @day == "Monday"
 			@title = "Monday - Push"
-			@compound1 = "Flat Barbell Bench Press"
-			@compound2 = "Seated Dumbbell Overhead Press"
+			@compound1 = "Barbell Bench Press"
+			@compound2 = "Overhead Barbell Press"
 		elsif @day == "Tuesday"
    		@title = "Tuesday - Pull"
 			@compound1 = "Deadlift"
@@ -141,8 +141,8 @@ class Ppl < ApplicationRecord
 			@compound2 = ""
 		elsif @day == "Thursday"
 			@title = "Thursday - Push"
-			@compound1 = "Standing Military Press"
-			@compound2 = "Incline Dumbbell Bench Press"
+			@compound1 = "Incline Bench Press"
+			@compound2 = "Barbell Bench Press"
 		elsif @day == "Friday"
 			@title = "Friday - Pull"
 			@compound1 = "Snatch Grip Deadlift"
