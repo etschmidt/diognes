@@ -24,6 +24,6 @@ Rails.application.routes.draw do
     post 'search', :on => :collection
   end
   
-  resources :posts,          only: [:create, :destroy]
+  resources :posts,          only: [:create, :destroy, :show]
 
 end

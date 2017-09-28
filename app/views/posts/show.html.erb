@@ -1,0 +1,21 @@
+<div>
+	<p>
+	<%= sanitize simple_format(auto_link(@post.content, :link => :urls)), tags: %w(strong em a code pre h2 h3 p blockquote ul ol li br), attributes: %w(href) %>                   	
+  </p>
+	-------------------------
+	<%if signed_in? %>         
+		<% if current_user.admin? || current_user == @post.user %>
+			
+		    <%= link_to @post, method: :delete, :style => "text-decoration:none; color:black",
+		    					 :remote => true do %>
+	      | x
+	    <% end %>
+	  <% end %>
+	  <% if current_user.admin? %>
+	  	<small>
+		  	<%= @post.created_at.to_date.to_formatted_s(:rfc822) %>
+		  	\\ <%= @post.user_id %>
+	  	</small>
+	  <% end %>
+	<% end %>
+</div>

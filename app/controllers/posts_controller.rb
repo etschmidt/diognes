@@ -23,6 +23,10 @@ before_action correct_user: :destroy
     end
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   private
 
     def post_params

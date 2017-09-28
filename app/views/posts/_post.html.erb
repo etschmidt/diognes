@@ -2,6 +2,9 @@
 	<p>
 	<%= sanitize simple_format(auto_link(post.content, :link => :urls)), tags: %w(strong em a code pre h2 h3 p blockquote ul ol li br), attributes: %w(href) %>                   	
   </p>
+  <%= link_to post_path(post), :style => "text-decoration:none; color:black" do %>
+    #
+  <% end %>
 	-------------------------
 	<%if signed_in? %>         
 		<% if current_user.admin? || current_user == post.user %>
