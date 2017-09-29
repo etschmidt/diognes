@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
+  impressionist actions: [:show] # for tracking views &c.
 
-before_action correct_user: :destroy
+  before_action correct_user: :destroy
 
   def create
     @post = current_user.posts.build(post_params)
@@ -25,6 +26,7 @@ before_action correct_user: :destroy
 
   def show
     @post = Post.find(params[:id])
+    impressionist(@post)
   end
 
   private
