@@ -11,7 +11,6 @@ class UsersController < ApplicationController
 		@user  = User.find(params[:id])
 		@posts = @user.posts
 		@post = current_user.posts.build if current_user == @user
-		@post_points = post_points
 
 		impressionist(@user)
 	end
@@ -64,12 +63,6 @@ class UsersController < ApplicationController
 		elsif @user.private?
 			redirect_to fail_path
 		end
-	end
-
-	def post_points
-		User.joins('inner join posts on users.id = posts.user_id')
-		   .select('posts.*, count(posts.inpressions) as post_points')
-		   .group('users.id').order('post_points desc')
 	end
 
 	def catch_not_found
