@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   impressionist actions: [:show] # for tracking views &c.
-
   before_action correct_user: :destroy
 
   def create
@@ -35,13 +34,13 @@ class PostsController < ApplicationController
       params.require(:post).permit(:content)
     end
 
-   def correct_user
-     if current_user.admin?
-       @post = Post.find_by(id: params[:id])
-     else
-       @post = current_user.posts.find_by(id: params[:id])
-       redirect_to root_url if @post.nil?
-     end
-   end
+    def correct_user
+      if current_user.admin?
+        @post = Post.find_by(id: params[:id])
+      else
+        @post = current_user.posts.find_by(id: params[:id])
+        redirect_to root_url if @post.nil?
+      end
+    end
 
 end
