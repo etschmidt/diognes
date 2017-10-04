@@ -10,7 +10,8 @@ namespace :wod do
 		wod = Wod.new
 		
 		post = Post.new(user_id: 141, # 5 in dev 
-							 			content: Time.now.strftime("%e %b") + "\n\n" + wod.print_ss + wod.print_wod)	
+							 			content: Time.now.strftime("%e %b") + "\n\n" + wod.print_ss + wod.print_wod, 
+										signed: true)	
 		post.save
 	end
 
@@ -19,7 +20,8 @@ namespace :wod do
 		20.times do |n|
 			wod = Wod.new
 			Post.create!( user_id: 141,
-										content: wod.print_wod)
+										content: wod.print_wod, 
+										signed: true)
 		end
 	end
 end
@@ -41,7 +43,8 @@ namespace :power do
 		power.reps
 
 		post = Post.new(user_id: 163, # 5 in dev 
-							 content: "<strong>" + power.days + " - " + power.title + "</strong>" + power.print_power + "\n\n" + Time.now.strftime("%e %b"))	
+										content: "<strong>" + power.days + " - " + power.title + "</strong>" + power.print_power, 
+										signed: true)	
 		post.save
 
 	end
@@ -67,7 +70,8 @@ namespace :ppl do
 		
 		post = Post.new(	 
 							 user_id: 156, #PhillyTraining
-							 content: "<strong>" + ppl.title + "</strong><br><br>" + ppl.print_ppl + "\n\n" + Time.now.strftime("%e %b"))	
+							 content: "<strong>" + ppl.title + "</strong><br><br>" + ppl.print_ppl, 
+										signed: true)	
 		post.save
 	end
 	
@@ -91,9 +95,10 @@ namespace :number do
 
 		number = Number.new
 
-		post = Post.new( user_id: 184,
+		post = Post.new(user_id: 184,
 										content: number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" +
-										number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>")
+										number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>" + number.print_number.to_s + "<br>", 
+										dated: false)
 		post.save
 	end
 
