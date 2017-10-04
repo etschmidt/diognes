@@ -1,22 +1,40 @@
 <div>
 <strong>POST POINTS: </strong> <%= @post.impressions_count %><br>
 	<p>
-	<%= sanitize simple_format(auto_link(@post.content, :link => :urls)), tags: %w(strong em a code pre h2 h3 p blockquote ul ol li br), attributes: %w(href) %>                   	
-  </p>
+		<%= sanitize simple_format(auto_link(@post.content, :link => :urls)), tags: %w(strong em a code pre h2 h3 p blockquote ul ol li br), attributes: %w(href) %>                   	
+	</p>
 	-------------------------
-	<%if signed_in? %>         
-		<% if current_user.admin? || current_user == @post.user %>
-			
+	<small>
+
+		<%if signed_in? %>         
+			<% if current_user.admin? || current_user == @post.user %>
+					<%= @post.created_at.to_date.to_formatted_s(:number) %> \\
+					<%= link_to user_path(@post.user), :style => "text-decoration:none; color:black" do %>
+						<%= @post.user_id %>
+					<% end %>
 		    <%= link_to @post, method: :delete, :style => "text-decoration:none; color:black",
 		    					 :remote => true do %>
 	      | x
-	    <% end %>
-	  <% end %>
-	  <% if current_user.admin? %>
-	  	<small>
-		  	<%= @post.created_at.to_date.to_formatted_s(:rfc822) %>
-		  	\\ <%= @post.user_id %>
-	  	</small>
-	  <% end %>
-	<% end %>
+		    <% end %>
+
+			<% end %>
+
+		<% else %>
+		  <% if @post.dated? %>
+			  <%= @post.created_at.to_date.to_formatted_s(:number) %>
+			<% end %>
+
+			<% if @post.dated? && @post.signed? %>
+			  \\ 
+			<% end %>
+			
+			<% if @post.signed? %>
+				<%= link_to user_path(@post.user), :style => "text-decoration:none; color:black" do %>
+					<%= @post.user_id %>
+				<% end %>
+		  <% end %>
+
+		<% end %>
+
+	</small>
 </div>
