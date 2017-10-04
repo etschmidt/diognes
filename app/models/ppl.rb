@@ -15,13 +15,13 @@ class Ppl < ApplicationRecord
 	
 	SHOULDERS = ["Seated Arnold Press", "Weight Plate Front Raise", "Rear Delt Barbell Row To Neck", "Seated Dumbbell Lateral Raise", "Standing Arnold Press",
 	"Alternate Bent Over Dumbbell Reverse Fly", "Dumbbell Lateral Raise", "Dumbbell Front Raise", "Seated Bent Over Dumbbell Reverse Fly", "Cable Lateral Raise", 
-	"Lying Rear Delt Barbell Raise", "Dublin Press", "Cuban Press", "Cable Front Raise", "Dumbbell Reverse Fly On Incline Bench", "Seated Dumbbell Press", "Standing Dumbbell Press",
+	"Lying Rear Delt Barbell Raise", "Dublin Press", "Swimmers Press", "Cable Front Raise", "Dumbbell Reverse Fly On Incline Bench", "Seated Dumbbell Press", "Standing Dumbbell Press",
 	"Machine Reverse Flys", "Military Press Behind Neck", "Alternate Seated Dumbbell Press", "One Arm Standing Dumbbell Front Raise"].shuffle
 	
 	TRICEPS = ["Dumbbell Tricep Kickback", "One Arm Standing Dumbbell Extension", "Close Grip Push Up", "Weighted Tricep Dips", "Alternate Lying Dumbbell Extension",
 	"EZ Bar Incline Skullcrusher", "Incline Two Arm Dumbbell Extension", "One Arm Seated Overhead Tricep Extension", "Lying Tricep Extension ", "Close Grip Bench Press", 
 	"High Pulley Overhead Rope Extension", "EZ Bar Skullcrusher", "French Press", "One Arm Seated Dumbbell Extension", "Lying Dumbbell Extension", 
-	"Seated French Press", "Two Arm Cable Tricep Kickback", "Weighted Bench Dips", "Decline Lying Dumbbell Extension"].shuffle
+	"Seated French Press", "Two Arm Cable Tricep Kickback", "Weighted Bench Dips", "Decline Lying Dumbbell Extension", "Rope Pulldown", "V-Bar Pulldown"].shuffle
 	
 	BACK = ["Close Grip Pull Up", "Straight Arm Lat Pull Down", "Behind Neck Lat Pull Down", "V-Bar Pull Up", "Close Grip Lat Pull Down",
 	"Rope Lat Pull Down", "Underhand Close Grip Lat Pull Down", "Close Grip Lat Pull Down", "Rope Pull Up", "Lat Pull Down", 
