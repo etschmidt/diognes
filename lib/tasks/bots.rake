@@ -10,7 +10,7 @@ namespace :wod do
 		wod = Wod.new
 		
 		post = Post.new(user_id: 141, # 5 in dev 
-							 			content: Time.now.strftime("%e %b") + "\n\n" + wod.print_ss + wod.print_wod, 
+							 			content: wod.print_ss + wod.print_wod, 
 										signed: true)	
 		post.save
 	end
@@ -143,7 +143,7 @@ namespace :purge do
 
 	task :tendays => :environment do
 
-		Post.where('user_id IN (?)', [141, 163, 156]).where('created_at < ?', 10.days.ago).each do |p|
+		Post.where('user_id IN (?)', [141, 163, 156]).where('created_at < ?', 18.days.ago).each do |p|
 			p.destroy
 		end
 
