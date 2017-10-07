@@ -20,7 +20,7 @@ class Ppl < ApplicationRecord
 	
 	TRICEPS = ["Dumbbell Tricep Kickback", "One Arm Standing Dumbbell Extension", "Close Grip Push Up", "Weighted Tricep Dips", "Alternate Lying Dumbbell Extension",
 	"EZ Bar Incline Skullcrusher", "Incline Two Arm Dumbbell Extension", "One Arm Seated Overhead Tricep Extension", "Lying Tricep Extension ", "Close Grip Bench Press", 
-	"High Pulley Overhead Rope Extension", "EZ Bar Skullcrusher", "French Press", "One Arm Seated Dumbbell Extension", "Lying Dumbbell Extension", 
+	"High Pulley Overhead Rope Extension", "EZ Bar Skullcrusher", "French Press", "Tate Press", "One Arm Seated Dumbbell Extension", "Lying Dumbbell Extension", 
 	"Seated French Press", "Two Arm Cable Tricep Kickback", "Weighted Bench Dips", "Decline Lying Dumbbell Extension", "Rope Pulldown", "V-Bar Pulldown"].shuffle
 	
 	BACK = ["Close Grip Pull Up", "Straight Arm Lat Pull Down", "Behind Neck Lat Pull Down", "V-Bar Pull Up", "Close Grip Lat Pull Down",
@@ -30,7 +30,7 @@ class Ppl < ApplicationRecord
 	
 	TRAPS = ["Dumbbell Upright Row", "Cable Upright Row", "Behind The Back Barbell Shrug", "One Arm Dumbbell Upright Row", "Barbell Shrug",
 	"Dumbbell Shrug", "Barbell Upright Row", "Barbell Wide Grip Row", "Sumo Deadlift High Pull", "Cable Shrug", 
-	"Seated Cable Shrug", "Seated Dumbbell Shrug", "Seated Cable Face Pull", "Tate Press", "Cable Face Pull"].shuffle
+	"Seated Cable Shrug", "Seated Dumbbell Shrug", "Seated Cable Face Pull", "Cable Face Pull"].shuffle
 	
 	BICEPS = ["EZ Bar Curl", "Alternating Standing Dumbbell Curl", "Dumbbell Preacher Curl", "Cable Curl",
 	"Zottman Curl", "Close Grip EZ Bar Curl", "Rope Cable Curl", "Wide Grip EZ Bar Curl", "Alternate Seated Hammer Curl", 
