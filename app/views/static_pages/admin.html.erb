@@ -1,5 +1,6 @@
 <p>Total users: <%= User.count %></p>
 <p>Total posts: <%= Post.count %></p>
+<p>Total Impressions: <%= Impression.count %></p>
 -------------------------------------
 <p>Last day:</p>
 <p>Users: <%= User.where(created_at: (Time.now - 24.hours)..Time.now).count %></p>
