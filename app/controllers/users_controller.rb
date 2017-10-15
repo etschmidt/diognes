@@ -11,7 +11,8 @@ class UsersController < ApplicationController
 		@user  = User.find(params[:id])
 		@posts = @user.posts
 		@post = current_user.posts.build if current_user == @user
-
+		@points = @user.impressions.where(created_at: (Time.now - 1.month)..Time.now).count 
+		@post_points = @user.posts.sum(:impressions_count)
 		impressionist(@user)
 	end
 
