@@ -12,13 +12,13 @@
 
 		<%if signed_in? %>         
 			<% if current_user.admin? || current_user == post.user %>
-					<%= post.created_at.to_date.to_formatted_s(:number) %> \\
-					<%= link_to user_path(post.user), :style => "text-decoration:none; color:black" do %>
-						<%= post.user_id %>
-					<% end %>
+				χ<%= post.created_at.to_date.to_formatted_s(:number) %> \\
+				θ<%= link_to user_path(post.user), :style => "text-decoration:none; color:black" do %>
+					<%= post.user_id %>
+				<% end %>
 		    <%= link_to post, method: :delete, :style => "text-decoration:none; color:black",
 		    					 :remote => true do %>
-	      | x
+	      | delete
 		    <% end %>
 
 			<% end %>
