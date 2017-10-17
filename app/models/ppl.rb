@@ -23,7 +23,7 @@ class Ppl < ApplicationRecord
 	"High Pulley Overhead Rope Extension", "EZ Bar Skullcrusher", "French Press", "Tate Press", "One Arm Seated Dumbbell Extension", "Lying Dumbbell Extension", 
 	"Seated French Press", "Two Arm Cable Tricep Kickback", "Weighted Bench Dips", "Decline Lying Dumbbell Extension", "Rope Pulldown", "V-Bar Pulldown"].shuffle
 	
-	BACK = ["Close Grip Pull Up", "Straight Arm Lat Pull Down", "Behind Neck Lat Pull Down", "V-Bar Pull Up", "Close Grip Lat Pull Down",
+	BACK = ["Close Grip Pull Up", "Behind Neck Lat Pull Down", "V-Bar Pull Up", "Close Grip Lat Pull Down",
 	"Rope Lat Pull Down", "Underhand Close Grip Lat Pull Down", "Close Grip Lat Pull Down", "Rope Pull Up", "Lat Pull Down", 
 	"Incline Bench Two Arm Dumbbell Row", "Cable Seated Row", "One Arm Dumbbell Row", "Bent Over Dumbbell Row", "T-Bar Row", 
 	"EZ Bar Reverse Grip Bent Over Row", "Standing One Arm Cable Row", "Reverse Grip Bent Over Row", "Incline Bench Barbell Row", "One Arm T-Bar Row"].shuffle

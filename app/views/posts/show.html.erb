@@ -3,8 +3,11 @@
 	<p>
 		<%= sanitize simple_format(auto_link(@post.content, :link => :urls)), tags: %w(strong em a code pre h2 h3 p blockquote ul ol li br), attributes: %w(href) %>                   	
 	</p>
-	-------------------------
 	<small>
+	λ<%= @post.id %>
+	</small>
+	----------------------
+		<small>
 
 		<%if signed_in? %>         
 			<% if current_user.admin? || current_user == @post.user %>
@@ -21,7 +24,7 @@
 
 		<% else %>
 		  <% if @post.dated? %>
-			  <%= @post.created_at.to_date.to_formatted_s(:number) %>
+			  χ<%= @post.created_at.to_date.to_formatted_s(:number) %>
 			<% end %>
 
 			<% if @post.dated? && @post.signed? %>
@@ -30,7 +33,7 @@
 			
 			<% if @post.signed? %>
 				<%= link_to user_path(@post.user), :style => "text-decoration:none; color:black" do %>
-					<%= @post.user_id %>
+					θ<%= @post.user_id %>
 				<% end %>
 		  <% end %>
 
