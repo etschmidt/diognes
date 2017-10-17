@@ -1,4 +1,4 @@
-<div>
+<br>
 <strong>POST POINTS: </strong> <%= @post.impressions_count %><br>
 	<p>
 		<%= sanitize simple_format(auto_link(@post.content, :link => :urls)), tags: %w(strong em a code pre h2 h3 p blockquote ul ol li br), attributes: %w(href) %>                   	
@@ -40,4 +40,3 @@
 		<% end %>
 
 	</small>
-</div>
