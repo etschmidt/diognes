@@ -2,10 +2,29 @@
 <p>Total posts: <%= Post.count %></p>
 <p>Total Impressions: <%= Impression.count %></p>
 -------------------------------------
-<p>Last day:</p>
-<p>Users: <%= User.where(created_at: (Time.now - 24.hours)..Time.now).count %></p>
-<p>Posts: <%= Post.where(created_at: (Time.now - 24.hours)..Time.now).count %></p>
-<p>Impressions: <%= Impression.where(created_at: (Time.now - 24.hours)..Time.now).count %></p>
+<p>Last 24 hours:</p>
+<p>Users: 
+	<% if @last_24_users.exists? %>
+		<%= @last_24_users.count %>
+	<% else %>
+		none
+	<% end %>	
+</p>
+<ol><%= render @last_24_users %></ol>
+<p>Posts:
+	<% if @last_24_posts.exists? %>
+		<%= @last_24_posts.count %>
+	<% else %>
+		none
+	<% end %>	
+</p>
+<p>Impressions:
+	<% if @last_24_impressions.exists? %>
+		<%= @last_24_impressions.count %>
+	<% else %>
+		none
+	<% end %>		
+</p>
 -------------------------------------
 <p>Last week:</p>
 <p>Users: <%= User.where(created_at: (Time.now - 7.days)..Time.now).count %></p>

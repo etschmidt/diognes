@@ -1,16 +1,22 @@
 class StaticPagesController < ApplicationController
 	before_action :admin_user, only: [:admin]
 
-  def admin
+  def agora
   	@top_posters = top_posters.limit(10)
   	@most_points = User.order('impressions_count desc').limit(10)
   	@recent_posts = Post.order('created_at desc').limit(10)
   end
 
-  def agora
+  def admin
   	@top_posters = top_posters.limit(10)
   	@most_points = User.order('impressions_count desc').limit(10)
   	@recent_posts = Post.order('created_at desc').limit(10)
+
+  	# Last 24
+  	@last_24_users = User.where(created_at: (Time.now - 24.hours)..Time.now)
+  	@last_24_posts = Post.where(created_at: (Time.now - 24.hours)..Time.now)
+  	@last_24_impressions = Impression.where(created_at: (Time.now - 24.hours)..Time.now)
+
   end
 
 	private
