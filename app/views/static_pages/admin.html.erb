@@ -10,7 +10,7 @@
 		none
 	<% end %>	
 </p>
-<ul reversed><%= render @last_24_users %></ul>
+<ul><%= render @last_24_users %></ul>
 <p>Posts:
 	<% if @last_24_posts.exists? %>
 		<%= @last_24_posts.count %>

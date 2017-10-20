@@ -13,7 +13,7 @@ class StaticPagesController < ApplicationController
   	@recent_posts = Post.order('created_at desc').limit(10)
 
   	# Last 24
-  	@last_24_users = User.where(created_at: (Time.now - 24.hours)..Time.now)
+  	@last_24_users = User.where(created_at: (Time.now - 24.hours)..Time.now).order('created_at desc')
   	@last_24_posts = Post.where(created_at: (Time.now - 24.hours)..Time.now)
   	@last_24_impressions = Impression.where(created_at: (Time.now - 24.hours)..Time.now)
 
