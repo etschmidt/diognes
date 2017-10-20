@@ -27,10 +27,10 @@
     <%= render 'application/favicon' %>
     <%= render 'layouts/header' %>
     <% if notice %>
-      <span class="info"><%= strip_tags(notice) %></span><br><br>
+      <br><span class="info"><%= strip_tags(notice) %></span><br><br>
     <% end %>
     <% if alert %>
-      <span class="info"><%= strip_tags(alert) %></span><br><br>
+      <br><span class="info"><%= strip_tags(alert) %></span><br><br>
     <% end %>
     <%= yield %>
     <br>

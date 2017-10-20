@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 	around_action :catch_not_found
 
 	before_action :signed_in_user, 	only: [:current_user_home]
-	before_action :private?, 				only: [:show]
+	before_action :private?, 		only: [:show]
 	before_action :correct_user?, 	only: [:edit, :update]
 
 	def show
@@ -42,7 +42,7 @@ class UsersController < ApplicationController
 	  if @user.present?
 		  redirect_to @user
 		else
-			redirect_to fail_path
+			redirect_to fail_path #request.env["HTTP_REFERER"]
 		end
 	end
 

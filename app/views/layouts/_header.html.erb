@@ -12,15 +12,15 @@
 	<% end %>
 	
 	<%= form_tag users_path, method: :get do %>
-		Θ <%= text_field_tag :search, params[:search], size: 4 %>
-		<%= submit_tag "go", :name => nil %>
+		<%= text_field_tag :search, params[:search], size: 4 %>
+		<%= submit_tag "Θ", :name => nil %>
+	<% end %>
+	<%= form_tag posts_path, method: :get do %>
+		<%= text_field_tag :search, params[:search], size: 4 %>
+		<%= submit_tag "Λ", :name => nil %>
 	<% end %>
 
 	<!--
 	<small>(if you know the number and the profile isn't private)</small><br><br>
 	-->
 </div>
-
-
-
-

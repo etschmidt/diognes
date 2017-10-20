@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   
   post 'search' => 'users#search'
 
+  post 'search' => 'posts#search'
+
   get '/fail', to: 'static_pages#fail'
 
   get '/admin', to: 'static_pages#admin'
@@ -24,6 +26,8 @@ Rails.application.routes.draw do
     post 'search', :on => :collection
   end
   
-  resources :posts,          only: [:create, :destroy, :show]
+  resources :posts, only: [:index, :create, :destroy, :show] do
+    post 'search', :on => :collection
+  end
 
 end
