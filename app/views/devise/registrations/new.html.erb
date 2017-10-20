@@ -15,7 +15,7 @@
   strong em a code pre h2 h3 p blockquote ul ol li br</small><br>
 
   <%= f.label :private? %><br>
-  <%= f.check_box :private, {}, true %><br>
+  <%= f.check_box :private, {}, true %><-- uncheck this if you're not a weirdo<br>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
