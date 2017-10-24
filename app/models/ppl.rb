@@ -15,7 +15,7 @@ class Ppl < ApplicationRecord
 	
 	SHOULDERS = ["Seated Arnold Press", "Weight Plate Front Raise", "Rear Delt Barbell Row To Neck", "Seated Dumbbell Lateral Raise", "Standing Arnold Press",
 	"Alternate Bent Over Dumbbell Reverse Fly", "Dumbbell Lateral Raise", "Dumbbell Front Raise", "Seated Bent Over Dumbbell Reverse Fly", "Cable Lateral Raise", 
-	"Lying Rear Delt Barbell Raise", "Dublin Press", "Swimmers Press", "Cable Front Raise", "Dumbbell Reverse Fly On Incline Bench", "Seated Dumbbell Press", "Standing Dumbbell Press",
+	"Dublin Press", "Swimmers Press", "Cable Front Raise", "Dumbbell Reverse Fly On Incline Bench", "Seated Dumbbell Press", "Standing Dumbbell Press",
 	"Machine Reverse Flys", "Military Press Behind Neck", "Alternate Seated Dumbbell Press", "One Arm Standing Dumbbell Front Raise"].shuffle
 	
 	TRICEPS = ["Dumbbell Tricep Kickback", "One Arm Standing Dumbbell Extension", "Close Grip Push Up", "Weighted Tricep Dips", "Alternate Lying Dumbbell Extension",
