@@ -9,7 +9,7 @@ class Ppl < ApplicationRecord
 	end
 	
 	CHEST = ["Dumbbell Floor Press", "Cable Crossovers (mid chest)", "Cable Crossovers (bent over)", "Wide Reverse Grip Bench Press", "Decline Bench Press",
-	"Decline Dumbbell Bench Press", "Dumbbell Flys", "Pec Dec", "Machine Flys", "Reverse Cable Crossovers",
+	"Decline Dumbbell Bench Press", "Dumbbell Flys", "Pec Dec", "Machine Flys", "Reverse Cable Crossovers", "Standing Cable Chest Press", 
 	"Incline Dumbbell Flys", "Dumbbell Pullover", "Lying Cable Pullover", "Barbell Pullover", "Dumbbell Bench Press", "Incline Dumbbell Bench Press",
 	"Alternate Dumbbell Bench Press (high start)", "Decline Dumbbell Flys", "Reverse Dumbbell Bench Press", "Reverse Grip Bench Press", "Muscle Clean & Press"].shuffle
 	
@@ -28,7 +28,7 @@ class Ppl < ApplicationRecord
 	"Incline Bench Two Arm Dumbbell Row", "Cable Seated Row", "One Arm Dumbbell Row", "Bent Over Dumbbell Row", "T-Bar Row", 
 	"EZ Bar Reverse Grip Bent Over Row", "Standing One Arm Cable Row", "Reverse Grip Bent Over Row", "Incline Bench Barbell Row", "One Arm T-Bar Row"].shuffle
 	
-	TRAPS = ["Dumbbell Upright Row", "Cable Upright Row", "Behind The Back Barbell Shrug", "One Arm Dumbbell Upright Row", "Barbell Shrug",
+	TRAPS = ["Dumbbell Upright Row", "Cable Upright Row", "Behind The Back Barbell Shrug", "Barbell Shrug",
 	"Dumbbell Shrug", "Barbell Upright Row", "Barbell Wide Grip Row", "Sumo Deadlift High Pull", "Cable Shrug", 
 	"Seated Cable Shrug", "Seated Dumbbell Shrug", "Seated Cable Face Pull", "Cable Face Pull"].shuffle
 	
