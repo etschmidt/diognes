@@ -25,6 +25,6 @@ About: <%= sanitize simple_format(@user.description), tags: %w(strong em a code 
 <% end %>
 
 <strong>POSTS: <span class="jp" style="display: none"><br>カ テ ゴ リ 一 覧 </span></strong>
-<ol reversed>
+<ul></ul>>
 	<%= render @posts %>
-</ol>
+</ul>
