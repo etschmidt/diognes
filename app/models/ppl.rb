@@ -9,13 +9,13 @@ class Ppl < ApplicationRecord
 	end
 	
 	CHEST = ["Dumbbell Floor Press", "Cable Crossovers (mid chest)", "Cable Crossovers (bent over)", "Wide Reverse Grip Bench Press", "Decline Bench Press",
-	"Decline Dumbbell Bench Press", "Dumbbell Flys", "Pec Dec", "Machine Flys", "Reverse Cable Crossovers", "Standing Cable Chest Press", 
+	"Decline Dumbbell Bench Press", "Dumbbell Flys", "Pec Dec", "Machine Flys", "Reverse Cable Crossovers", "Standing Cable Chest Press", "One-Arm Cable Flyes",
 	"Incline Dumbbell Flys", "Dumbbell Pullover", "Lying Cable Pullover", "Barbell Pullover", "Dumbbell Bench Press", "Incline Dumbbell Bench Press",
 	"Alternate Dumbbell Bench Press (high start)", "Decline Dumbbell Flys", "Reverse Dumbbell Bench Press", "Reverse Grip Bench Press", "Muscle Clean & Press"].shuffle
 	
 	SHOULDERS = ["Seated Arnold Press", "Weight Plate Front Raise", "Rear Delt Barbell Row To Neck", "Seated Dumbbell Lateral Raise", "Standing Arnold Press",
 	"Alternate Bent Over Dumbbell Reverse Fly", "Dumbbell Lateral Raise", "Dumbbell Front Raise", "Seated Bent Over Dumbbell Reverse Fly", "Cable Lateral Raise", 
-	"Dublin Press", "Swimmers Press", "Cable Front Raise", "Dumbbell Reverse Fly On Incline Bench", "Seated Dumbbell Press", "Standing Dumbbell Press",
+	"Dublin Press", "Swimmers Press", "Cable Front Raise", "Dumbbell Reverse Fly On Incline Bench", "Seated Dumbbell Press", "Standing Dumbbell Press", "One-Arm Reverse Cable Flyes",
 	"Machine Reverse Flys", "Military Press Behind Neck", "Alternate Seated Dumbbell Press", "One Arm Standing Dumbbell Front Raise"].shuffle
 	
 	TRICEPS = ["Dumbbell Tricep Kickback", "One Arm Standing Dumbbell Extension", "Close Grip Push Up", "Weighted Tricep Dips", "Alternate Lying Dumbbell Extension",
@@ -23,7 +23,7 @@ class Ppl < ApplicationRecord
 	"High Pulley Overhead Rope Extension", "EZ Bar Skullcrusher", "French Press", "Tate Press", "One Arm Seated Dumbbell Extension", "Lying Dumbbell Extension", 
 	"Seated French Press", "Two Arm Cable Tricep Kickback", "Weighted Bench Dips", "Decline Lying Dumbbell Extension", "Rope Pulldown", "V-Bar Pulldown"].shuffle
 	
-	BACK = ["Close Grip Pull Up", "Behind Neck Lat Pull Down", "V-Bar Pull Up", "Close Grip Lat Pull Down",
+	BACK = ["Close Grip Pull Up", "Behind Neck Lat Pull Down", "V-Bar Pull Up", "Close Grip Lat Pull Down", "Straight-Arm Seated Cable Rows",
 	"Rope Lat Pull Down", "Underhand Close Grip Lat Pull Down", "Close Grip Lat Pull Down", "Rope Pull Up", "Lat Pull Down", 
 	"Incline Bench Two Arm Dumbbell Row", "Cable Seated Row", "One Arm Dumbbell Row", "Bent Over Dumbbell Row", "T-Bar Row", 
 	"EZ Bar Reverse Grip Bent Over Row", "Standing One Arm Cable Row", "Reverse Grip Bent Over Row", "Incline Bench Barbell Row", "One Arm T-Bar Row"].shuffle
@@ -48,7 +48,7 @@ class Ppl < ApplicationRecord
 	CALVES = ["Standing Barbell Calf Raise", "Seated Barbell Calf Raise", "Standing Dumbbell Calf Raise", "One Leg Seated Dumbbell Calf Raise", "Rocking Standing Calf Raise",
 	"Donkey Calf Raise", "One Leg Donkey Calf Raise", "45 Degree Toe Raise"].shuffle
 	
-	ABS = ["Scullers", "Abdominal Air Bike", "Lying Alternate Floor Leg Raise", "Standing Barbell Twist", "Wood Chop",
+	ABS = ["Scullers", "Abdominal Air Bike", "Lying Alternate Floor Leg Raise", "Wood Chop",
 	"Standing Cable Crunch", "Kneeling Cable Crunch", "Dumbbell Side Bends", "Weighted Crunch", "Decline Sit Up", 
 	"Lying Bench Leg Raise", "Hanging Knee Raise", "Strict Toes to Bar", "Russian Twist", "Seated Barbell Twist", 
 	"Twisting Decline Sit Up", "Lying Heel Touches", "Twisting Hanging Knee Raise", "Saw in Plank", "Ab Rollout"].shuffle
