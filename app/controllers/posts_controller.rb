@@ -18,10 +18,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
     notice = "post deleted"     
-    respond_to do |format|
-      format.js {render inline: "location.reload();" }
-      format.html { redirect_to request.referer }
-    end
+    redirect_to current_user
   end
 
   def show
