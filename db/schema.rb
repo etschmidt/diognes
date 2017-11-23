@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171003220831) do
+ActiveRecord::Schema.define(version: 20171123025710) do
 
   create_table "conns", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20171003220831) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "impressions_count"
-    t.boolean "signed", default: false
+    t.boolean "signed", default: true
     t.boolean "dated", default: true
     t.index ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_posts_on_user_id"
