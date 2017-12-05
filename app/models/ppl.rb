@@ -112,10 +112,10 @@ class Ppl < ApplicationRecord
 		elsif @day == "Tuesday" or @day == "Friday"
 			@iso1a = BACK.first
 			@iso1b = BACK.last
-			@iso2a = TRAPS.first
-			@iso2b = TRAPS.last
 			@iso3a = BICEPS.first
 			@iso3b = BICEPS.last
+			@iso2a = TRAPS.first
+			@iso2b = TRAPS.last
 		else @day == "Wednesday" or @day == "Saturday"
 			@iso1a = QUADS.first
 			@iso1b = QUADS.last
