@@ -151,7 +151,7 @@ namespace :purge do
 
 	task :impressions => :environment do
 
-		Impression.where('created_at < ?', 10.days.ago).each do |p|
+		Impression.where('created_at < ?', 5.days.ago).each do |p|
 			p.destroy
 		end
 
